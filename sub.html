@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const s = "pwwkew";
+
+var lengthOfLongestSubstring = function(s) {
+    let arr2 = []; 
+    let maxLength = 0; 
+
+    for (let i = 0; i < s.length; i++) {
+        if (!arr2.includes(s[i])) {
+            arr2.push(s[i]); 
+        } else {
+            while (arr2.includes(s[i])) {
+                arr2.shift();
+            }
+            arr2.push(s[i]);
+        }
+
+        maxLength = Math.max(maxLength, arr2.length);
+    }
+
+    return maxLength;
+};
+
+console.log(lengthOfLongestSubstring(s)); 
+    </script>
+</body>
+</html>
