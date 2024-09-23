@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        nums=[2,5,6,9,10];
+var findGCD = function(nums) {
+    smallest=Math.min(...nums);
+    largest=Math.max(...nums);
+    gcd=1;
+    for(i=2;i<=largest;i++){
+        if(smallest%i==0 && largest%i==0){
+            gcd=i;
+        }
+
+    }
+    return gcd ;
+};
+console.log(findGCD(nums));
+    </script>
+</body>
+</html>
